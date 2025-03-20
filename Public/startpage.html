@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AniHaven</title>
+    <link rel="stylesheet" href="startpage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap"
+    />
+  </head>
+  <header>
+    <div id="Logodiv">
+      <img class="Logo" src="Bilder/Logo AniHaven.png" alt="Logo" />
+    </div>
+  </header>
+  <body>
+    <nav id="categories">
+      <a href="SecondPage.html" onclick="">New</a>
+      <div class="pillar"></div>
+      <a href="index.html">Homepage</a>
+      <div class="pillar"></div>
+      <a href="ThirdPage.html">Popular</a>
+    </nav>
+
+    <div id="MainBox">ddddd</div>
+
+
+
+
+
+    <div id="menuSection">
+        <div class="MenuPillar">
+          <div>
+            <button id="closeBtnMenu" onclick="closeMenuSection()">Close Menu</button>
+            <div id="MenuSectionSearchContainer" >
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search For Anime"
+                onkeyup="showResults('searchInput', 'suggestionsBox' )"
+              />
+              <div class="suggestions" id="suggestionsBox"></div>
+            </div>
+              <p id="MenuPillarTitle">Menu Section</p>
+                <div id="MenuPillarCategories">
+                  <p onclick="openOverlayForCategory('PopularPageOverlay')">Popular</p>
+                  <p onclick="openOverlayForCategory('NewPageOverlay')">New</p>
+                  <p onclick="CloseAllOverlay()">Homepage</p>
+                </div>
+      
+          </div> 
+        </div>
+      </div>
+    <script src="functionForAll.js"></script>
+  </body>
+  <footer>
+    <p>
+      AniHaven does not store any files on our server, we only linked to the
+      media which is hosted on 3rd party services. © AniHaven.to. All rights
+      reserved.
+    </p>
+  </footer>
+</html>

@@ -1,0 +1,578 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/*Bildet og text for animeet på homepagen*/
+.PicAndText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.PicAndText p {
+  text-align: center;
+  font-family: var(--Bangers);
+  font-size: 40px;
+  transition: transform 1.3s;
+  cursor: pointer;
+}
+.PicAndText:hover {
+  transform: scale(1.05);
+}
+/*Header adjustments*/
+header {
+  background-color: var(--basicColor); /* Default solid color */
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  padding: 10px 20px; /* Added some padding */
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.4s ease-in-out,
+    backdrop-filter 0.4s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Transparent when scrolling */
+.transparent {
+  background-color: #bebebe47; /* Adjust transparency */
+  backdrop-filter: blur(10px); /* Optional blur effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+/**/
+footer {
+  width: 100%;
+  position: relative; /* Stiller footeren i forhold til det øvrige innholdet */
+  bottom: 0;
+  background-color: #333; /* Velg ønsket bakgrunnsfarge */
+  color: white; /* Velg ønsket tekstfarge */
+  text-align: center; /* Sentrer teksten */
+  padding: 10px 0; /* Legger litt plass rundt teksten */
+}
+.Titles {
+  display: flex;
+  padding-left: 10px;
+  gap: 90px;
+}
+.AnimeTitles div {
+  font-family: var(--Bangers);
+  font-size: 40px;
+  justify-content: center;
+}
+/*Kategorier i headeren*/
+h2 {
+  font-family: var(--Bangers);
+  font-size: 3em;
+  cursor: pointer;
+}
+.TitleOverlay {
+  display: flex;
+  font-family: var(--Bangers);
+  font-size: 5em;
+  margin: auto;
+  justify-content: center;
+}
+#kategorierHeader {
+  display: flex;
+  align-items: center;
+  gap: 400px;
+}
+#kategorierHeader div {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+#kategorierHeader img {
+  display: flex;
+  width: auto;
+  height: 60px;
+}
+.kategorierVideo {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.bigPillar {
+  margin: auto;
+  height: 5px;
+  width: 1885px;
+  background-color: var(--white);
+}
+/*Titlene på Animeet på overlayen*/
+.h3 {
+  text-align: center;
+  font-size: 5em;
+  font-family: var(--Lalezar);
+  font-weight: 900;
+  
+}
+.Logo {
+  display: flex;
+  height: 100px; /* Adjust size */
+  width: auto;
+}
+#Logodiv {
+  width: 600px;
+  display: block;
+}
+
+body {
+  display: block;
+  background-color: var(--basicColor);
+}
+/*Bilde øverst på homepagen*/
+#Animepic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 2000px;
+  height: 1000px;
+  background-image: url(Bilder/Picture_Backround1.jpg);
+  transform: translate(-8px, -5px);
+  background-size: cover;
+}
+/*Titlene på kategoriene*/
+.pTitle {
+  font-family: var(--Bangers);
+  font-size: 7ex;
+  padding-left: 2%;
+  color: var(--buttonAndText);
+}
+/*Listen på episodene*/
+.listEp {
+  font-family: var(--Bangers);
+  background-color: var(--overlayColor);
+  color: var(--white);
+  font-size: 3em;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Keep it above the scrolling list */
+}
+/*Diven for popular kategorien*/
+.PopularAnimeDiv {
+  display: flex;
+  gap: 25px;
+  padding-left: 10px;
+}
+/*Bildene for popular kategorien*/
+.PopularAnime {
+  width: 200px;
+}
+.Pillar {
+  height: 283px;
+  width: 6px;
+  background-color: var(--overlayAndList);
+}
+/*Overlayen for Animeer*/
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-size: cover;
+  overflow-y: scroll;
+}
+.overlayForCategory {
+  position: fixed;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-size: cover;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--basicColor);
+  display: none;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.headerOverlay {
+  background-color: var(--basicColor); /* Default solid color */
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  gap: 60px;
+  padding: 10px 20px; /* Added some padding */
+  margin: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.4s ease-in-out,
+    backdrop-filter 0.4s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.OverlayMenu {
+  
+  width: auto;
+  height: 60px;
+}
+.bodyOverlay {
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+}
+#NewPageOverlay{
+display: flex;
+}
+/* Overlay backrounds*/
+#SoloLeveling {
+  background-image: url(Bilder/soloLevelingBackground.jpg);
+}
+#OnePiece {
+  background-image: url(Bilder/onePieceBackground.avif);
+}
+#videoOverlay3 {
+  background-image: url(Bilder/soloLevelingBackground.jpg);
+}
+#Suzume {
+  background-image: url(Bilder/SuzumeBackground.jpg);
+}
+#SakamotoDays{
+  background-image: url(Bilder/SakamotoDaysBackground.avif);
+}
+
+/*Rammen for videospilleren*/
+.video-wrapper {
+  display: flex;
+  border-radius: 10px;
+  max-width: 1400px;
+  width: 100%;
+  background-color: var(--basicColor);
+  height: 650px;
+}
+.video-wrapper p {
+  position: sticky;
+}
+/* Videoliste for videone */
+.video-list1 {
+  width: 30%;
+  max-height: 500px;
+  overflow-y: auto;
+  z-index: 0; /* Sikrer at videolisten er over andre elementer */
+}
+
+.video-list1 p {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.video-list1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.video-list1 li {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-size: 3em;
+  font-family: var(--Lalezar);
+  font-weight: 100;
+  text-align: left;
+  background-color: var(--overlayAndList);
+}
+
+.video-list1 li:hover {
+  background: rgba(140, 140, 140, 0.1);
+}
+/* Video-container */
+.video-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  flex-direction: column;
+  z-index: 1; /* Sikrer at videoavspilleren er under videolisten */
+}
+
+/* Størrelse på video */
+video {
+  width: 100%;
+  border-radius: 10px;
+}
+/*Knapp for å lukke overlayen*/
+.close-btn {
+  font-size: 4em;
+  color: var(--white);
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: var(--Bangers);
+  transition: 100ms;
+  border-radius: 0%;
+  position: relative;
+}
+
+.close-btn:hover {
+  background: var(--overlayAndList);
+}
+/*Searchbar*/
+.search-container {
+  flex-grow: 1; /* Allows it to stretch */
+  max-width: 400px; /* Adjust width */
+  padding-top: 50px;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.suggestions {
+  display: flex;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  border-top: none;
+  background: var(--white);
+  max-height: 150px;
+  max-width: 350px;
+  overflow-y: auto;
+  display: none; /* Hide initially */
+  background-color: var(--overlayColor);
+  font-family: var(--Lalezar);
+  font-size: 150%;
+}
+.suggestion-img {
+  width: 80px; /* Adjust this width to your preference */ /* Adjust this height to your preference */
+  object-fit: cover; /* Ensures the image fits within the box without distortion */
+  margin-right: 10px; /* Adds space between the image and the text */
+}
+
+.suggestions div {
+  padding: 8px;
+  cursor: pointer;
+}
+.suggestions div:hover {
+  background: var(--basicColor);
+}
+/*Rows in New Overlay*/
+#NewPicksFirstRow {
+  gap: 55px;
+}
+#NewPicksSecondRow {
+  gap: 55px;
+}
+#RandomAnime {
+  width: 400px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: var(--buttonAndText);
+  font-size: 3em;
+  font-family: var(--Bangers);
+  opacity: 100%;
+  color: var(--white);
+}
+/* Videoliste (kun tekst) */
+/*Menu section*/
+#menuSection {
+  display: none;
+  position: fixed;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: var(--overlayColorTransparent);
+  background-size: cover;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.MenuPillar {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+  background-color: var(--overlayAndList);
+  margin-left: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#MenuPillarTitle {
+  font-size: 3em;
+  font-family: var(--Lalezar);
+  color: var(--buttonAndText);
+  padding-left: 70px;
+  
+}
+#MenuPillarCategories  {
+  display: flex;
+  flex-direction: column;
+}
+#MenuPillarCategories p{
+font-size: 2em;
+align-self: center;
+font-family: var(--Lalezar);
+color: var(--overlayColor);
+cursor: pointer;
+}
+#MenuPillarCategories p:hover{
+  color: var(--overlayColor);
+  }
+#closeBtnMenu {
+  width: max-content;
+  font-size: 3em;
+  justify-content: center;
+  width: 400px;
+  height: 100px;
+  color: var(--white);
+  background-color: var(--overlayColor);
+  transition: 100ms;
+}
+#MenuSectionSearchContainer{
+   /* Allows it to stretch */
+  max-width: 350px; /* Adjust width */
+  margin-left: 15px;
+}
+#closeBtnMenu:hover {
+  background-color: var(--basicColor);
+}
+:root {
+  --basicColor: #bebebe;
+  --overlayColor: #6b6b6b;
+  --buttonAndText: #d42900;
+  --overlayAndList: #b2b2b2;
+  --white: #ffffff;
+  --overlayColorTransparent: #6b6b6b82;
+  --Bangers: "Bangers", cursive;
+  --Lalezar: "Lalezar", cursive;
+}
+
+  @media (max-width: 960px) {
+    .search-container {
+        display: none; /* Skjul søkefeltet */
+    }
+
+    #kategorierHeader div {
+        display: none; /* Skjul "New" og "Popular"-knappene */
+    }
+
+    #kategorierHeader img {
+        display: block; /* Vis hamburger-ikonet */
+    }
+    .overlayh2 {
+      display: none;
+    }
+    .headerOverlay div img {
+      display: block;
+    }
+    .MenuPillar {
+      width: 50%; /* Bredden økes for mindre skjermer */
+  }
+  .kategorierVideo img{
+    display: block;
+  }
+  #closeBtnMenu {
+      width: 100%; /* Full bredde på små skjermer */
+      font-size: 2em; /* Mindre tekststørrelse */
+  }
+.video-wrapper {
+  padding-top: 65px;
+  flex-direction: column; /* Endrer retningen til kolonne */
+}
+#MenuSectionSearchContainer{
+  display: block;
+  width: 88%;
+  
+}
+.video-list1 {
+  width: 100%; /* Full bredde på små skjermer */
+  min-height: 200px; /* Minimumshøyde for å sikre at den er synlig */
+  max-height: 300px; /* Begrens maksimal høyde */
+  overflow-y: auto; /* Legg til scroll hvis innholdet er for langt */
+}
+.video-container{
+  padding-bottom: 60px ;
+}
+.h3{
+  color: var(--buttonAndText);
+}
+#MenuPillarTitle{
+  padding-left: 0;
+}
+.MenuPillar{
+  padding: 0;
+  width: 300px;
+}
+#Animepic{
+  width: 100%;
+  background-image: url(Bilder/Kaneki_KenBackground_mobile.jpg_large);
+}
+}
+@media (max-width: 1200px) {
+    .search-container {
+        display: none; /* Skjul søkefeltet */
+    }
+
+    #kategorierHeader div {
+        display: none; /* Skjul "New" og "Popular"-knappene */
+    }
+
+    #kategorierHeader img {
+        display: block; /* Vis hamburger-ikonet */
+    }
+    .overlayh2 {
+      display: none;
+    }
+    .headerOverlay div img {
+      display: block;
+    }
+    .MenuPillar {
+      width: 50%; /* Bredden økes for mindre skjermer */
+  }
+  .kategorierVideo img{
+    display: block;
+  }
+  #closeBtnMenu {
+      width: 100%; /* Full bredde på små skjermer */
+      font-size: 2em; /* Mindre tekststørrelse */
+  }
+.video-wrapper {
+  padding-top: 65px;
+  flex-direction: column; /* Endrer retningen til kolonne */
+}
+#MenuSectionSearchContainer{
+  display: block;
+}
+.video-list1 {
+  width: 100%; /* Full bredde på små skjermer */
+  min-height: 200px; /* Minimumshøyde for å sikre at den er synlig */
+  max-height: 300px; /* Begrens maksimal høyde */
+  overflow-y: auto; /* Legg til scroll hvis innholdet er for langt */
+}
+.video-container{
+  padding-bottom: 60px ;
+}
+.h3{
+  color: var(--buttonAndText);
+}
+#MenuPillarTitle{
+  padding-left: 0;
+}
+.MenuPillar{
+  padding: 0;
+  width: 300px;
+}
+#Animepic{
+  width: 100%;
+  background-image: url(Bilder/Kaneki_KenBackground_mobile.jpg_large);
+}
+}

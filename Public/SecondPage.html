@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AniHaven</title>
+    <link rel="shortcut icon" href="Bilder/MainLogo AniHaven.png" />
+    <link rel="stylesheet" href="SecondPage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap"
+    />
+  </head>
+  <header>
+    <div id="Logodiv">
+      <img class="Logo" src="Bilder/Logo AniHaven.png" alt="Logo" />
+    </div>
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search For Anime"
+        onkeyup="showResults('searchInput', 'suggestionsBox' )"
+      />
+      <div class="suggestions" id="suggestionsBox"></div>
+    </div>
+    <div id="kategorierHeader">
+      <div>
+      <h2 onclick="openOverlayForCategory('NewPageOverlay')">New</h2>
+      <h2 onclick="openOverlayForCategory('PopularPageOverlay')">Popular</h2>
+    </div>
+      <img src="Bilder/MenuSection.png" alt="MenuSection" onclick="openMenuSection()">
+    </div>
+      
+  </header>
+
+  <body>
+
+    <div id="NewPageOverlay" class="overlayForCategory">
+      <div class="headerOverlay">
+        <img class="Logo" src="Bilder/Logo AniHaven.png" alt="" />
+        <div class="search-container">
+          <input
+              type="text"
+              id="searchInputNew"
+              placeholder="Search For Anime"
+              onkeyup="showResults('searchInputNew', 'suggestionsBoxNew' )"
+          />
+          <div class="suggestions" id="suggestionsBoxNew"></div>
+        </div>
+        <div id="kategorierHeader">
+        <div>
+            <h2 class="overlayh2" onclick="closeOverlayForCategory('NewPageOverlay')">Homepage</h2>
+          <h2 class="overlayh2" onclick="openOverlayForCategory('PopularPageOverlay')">Popular</h2>
+          </div>
+        <img class="OverlayMenu" src="Bilder/MenuSection.png" alt="MenuSection" onclick="openMenuSection()">
+      </div>
+      </div>
+
+      <div class="bodyOverlay">
+        <div class="bigPillar"></div>
+
+        <div>
+          <div class="TitleOverlay"><p>New</p></div>
+          <div id="NewPicksFirstRow" class="PopularAnimeDiv">
+            <div class="PicAndText">
+              <img
+                class="PopularAnime"
+                src="Bilder/soloLeveling.jpg"
+                alt=""
+                onclick="openOverlay('SoloLeveling')"
+              />
+              <p>Solo Leveling</p>
+            </div>
+            <div class="PicAndText">
+              <img
+                class="PopularAnime"
+                src="Bilder/Suzume.jpg"
+                alt=""
+                onclick="openOverlay('Suzume')"
+              />
+              <p>Suzume</p>
+            </div>
+            <div class="PicAndText">
+              <img
+                class="PopularAnime"
+                src="Bilder/SakamotoDays.jpg"
+                alt=""
+                onclick="openOverlay('SakamotoDays')"
+              />
+              <p>Sakamoto Days</p>
+            </div>
+          </div>
+
+          <div id="NewPicksSecondRow" class="PopularAnimeDiv">
+            <div class="PicAndText">
+              <img
+                class="PopularAnime"
+                src="Bilder/OnePiece.jpg"
+                alt=""
+                onclick="openOverlay('OnePiece')"
+              />
+              <p>One Piece</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="PopularPageOverlay" class="overlayForCategory">
+      <div class="headerOverlay">
+        <img class="Logo" src="Bilder/Logo AniHaven.png" alt="" />
+        <div class="search-container">
+          <input
+              type="text"
+              id="searchInputPopular"
+              placeholder="Search For Anime"
+              onkeyup="showResults('searchInputPopular', 'suggestionsBoxPopular' )"
+          />
+          <div class="suggestions" id="suggestionsBoxPopular"></div>
+        </div>
+        <div id="kategorierHeader">
+          <div>
+            <h2 class="overlayh2" onclick="closeOverlayForCategory('PopularPageOverlay')">Homepage</h2>
+          <h2 class="overlayh2" onclick="openOverlayForCategory('NewPageOverlay')">New</h2>
+          </div>
+          <img class="OverlayMenu" src="Bilder/MenuSection.png" alt="MenuSection" onclick="openMenuSection()">
+        </div>
+      </div>
+
+      <div class="bodyOverlay">
+        <div class="bigPillar"></div>
+
+        <div>
+          <div class="TitleOverlay"><p>Popular</p></div>
+          <div id="NewPicksFirstRow" class="PopularAnimeDiv">
+            <div class="PicAndText">
+              <img
+                class="PopularAnime"
+                src="Bilder/soloLeveling.jpg"
+                alt=""
+                onclick="openOverlay('SoloLeveling')"
+              />
+              <p>Solo Leveling</p>
+            </div>
+            <div class="PicAndText">
+              <img
+                class="PopularAnime"
+                src="Bilder/Suzume.jpg"
+                alt=""
+                onclick="openOverlay('Suzume')"
+              />
+              <p>Suzume</p>
+            </div>
+            <div class="PicAndText">
+              <img
+                class="PopularAnime"
+                src="Bilder/SakamotoDays.jpg"
+                alt=""
+                onclick="openOverlay('SakamotoDays')"
+              />
+              <p>Sakamoto Days</p>
+            </div>
+          </div>
+
+          <div id="NewPicksSecondRow" class="PopularAnimeDiv">
+            <div class="PicAndText">
+              <img
+                class="PopularAnime"
+                src="Bilder/OnePiece.jpg"
+                alt=""
+                onclick="openOverlay('OnePiece')"
+              />
+              <p>One Piece</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+    <!-- Trending section -->
+     
+    
+    <div id="SoloLeveling" class="overlay">
+      <div class="headerOverlay">
+        <img class="Logo" src="Bilder/Logo AniHaven.png" alt="" />
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInputOneSoloLeveling"
+            placeholder="Search For Anime"
+            onkeyup="showResults('searchInputSoloLeveling', 'suggestionsBoxSoloLeveling' )"
+          />
+          <div class="suggestions" id="suggestionsBoxSoloLeveling"></div>
+        </div>
+        <div class="kategorierVideo">
+        <h2 class="overlayh2" onclick="closeVideo('SoloLeveling')">Homepage</h2>
+        <h2  class="overlayh2" onclick="openOverlayForCategoryAndCloseVideo('NewPageOverlay')">New</h2>
+      <h2 class="overlayh2" onclick="openOverlayForCategoryAndCloseVideo('PopularPageOverlay')">Popular</h2>
+      <img class="OverlayMenu" src="Bilder/MenuSection.png" alt="MenuSection" onclick="openMenuSection()">
+      </div>
+      </div>
+      <div class="video-wrapper">
+        <!-- Videoliste -->
+
+        <div class="video-list1">
+          <p class="listEp">List Of Episodes</p>
+          <nav>
+            <ul>
+              <li
+                onclick="SoloLevelingChange('')"
+              >
+                Episode 1
+              </li>
+              <li onclick="SoloLevelingChange('Ep2SoloLeveling.mkv')">Episode 2</li>
+              <li onclick="SoloLevelingChange('video/Ep3SoloLeveling.mkv')">Episode 3</li>
+              <li onclick="SoloLevelingChange('video/Ep4SoloLeveling.mkv')">
+                Episode 4
+              </li>
+              <li onclick="SoloLevelingChange('video/Ep5SoloLeveling.mkv')">
+                Episode 5
+              </li>
+              <li onclick="SoloLevelingChange('video/Ep6SoloLeveling.mkv')">
+                Episode 6
+              </li>
+              <li onclick="SoloLevelingChange('video/Ep7SoloLeveling.mkv')">
+                Episode 7
+              </li>
+              <li onclick="SoloLevelingChange('video/Ep8SoloLeveling.mkv')">
+                Episode 8
+              </li>
+              <li onclick="SoloLevelingChange('video/Ep9SoloLeveling.mkv')">
+                Episode 9
+              </li>
+              <li onclick="SoloLevelingChange('video/Ep10SoloLeveling.mkv')">
+                Episode 10
+              </li>
+              <li onclick="SoloLevelingChange('video/Ep11SoloLeveling.mkv')">
+                Episode 11
+              </li>
+              <li
+                onclick="SoloLevelingChange('https://player.vimeo.com/video/1064648409')"
+              >
+                Episode 12
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Videospiller -->
+        <div class="video-container">
+          <span class="close-btn" onclick="closeVideo('SoloLeveling')">GO BACK</span>
+          <video class="Videospiller" id="SoloLevelingPlayer" controls>
+            <source src="video/Ep1SoloLeveling.mkv" type="video/mp4" />
+            Din nettleser støtter ikke videoavspilling.
+          </video>
+          <div class="h3">Solo Leveling</div>
+        </div>
+      </div>
+    </div>
+    <div id="OnePiece" class="overlay">
+      <div class="headerOverlay">
+        <img class="Logo" src="Bilder/Logo AniHaven.png" alt="" />
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInputOnePiece"
+            placeholder="Search For Anime"
+            onkeyup="showResults('searchInputOnePiece', 'suggestionsBoxOnePiece' )"
+          />
+          <div class="suggestions" id="suggestionsBoxOnePiece"></div>
+        </div>
+        <div class="kategorierVideo">
+        <h2 class="overlayh2" onclick="closeVideo('OnePiece')">Homepage</h2>
+        <h2  class="overlayh2" onclick="openOverlayForCategoryAndCloseVideo('NewPageOverlay')">New</h2>
+      <h2 class="overlayh2" onclick="openOverlayForCategoryAndCloseVideo('PopularPageOverlay')">Popular</h2>
+      <img class="OverlayMenu" src="Bilder/MenuSection.png" alt="MenuSection" onclick="openMenuSection()">
+      </div>
+      </div>
+      <div class="video-wrapper">
+        <!-- Videoliste -->
+        <div class="video-list1">
+          <p class="listEp">List Of Episodes</p>
+          <nav>
+          <ul>
+            <li onclick="OnePieceChange('video1.mp4')">Episode 1</li>
+            <li onclick="OnePieceChange('video/STANDO POWAH.mp4')">Episode 2</li>
+            <li onclick="OnePieceChange('video/Suzume.mp4')">Episode 3</li>
+            <li onclick="OnePieceChange('video3.mp4')">Episode 4</li>
+            <li onclick="OnePieceChange('video3.mp4')">Episode 5</li>
+            <li onclick="OnePieceChange('video3.mp4')">Episode 6</li>
+            <li onclick="OnePieceChange('video3.mp4')">Episode 7</li>
+            <li onclick="OnePieceChange('video3.mp4')">Episode 8</li>
+            <li onclick="OnePieceChange('video3.mp4')">Episode 9</li>
+            <li onclick="OnePieceChange('video3.mp4')">Episode 10</li>
+            <li onclick="OnePieceChange('video3.mp4')">Episode 11</li>
+            <li onclick="OnePieceChange('video3.mp4')">Episode 12</li>
+            <li onclick="OnePieceChange('video3.mp4')">Episode 13</li>
+          </ul>
+        </nav>
+        </div>
+        <!-- Videospiller -->
+        <div class="video-container">
+          <span class="close-btn" onclick="closeVideo('OnePiece')">GO BACK</span>
+          <video class="Videospiller" id="OnePiecePlayer" controls>
+            <source src="video1.mp4" type="video/mp4" />
+            Din nettleser støtter ikke videoavspilling.
+          </video>
+          <div class="h3">One Piece</div>
+        </div>
+      </div>
+    </div>
+    <div id="Suzume" class="overlay">
+      <div class="headerOverlay">
+        <img class="Logo" src="Bilder/Logo AniHaven.png" alt="" />
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInputSuzume"
+            placeholder="Search For Anime"
+            onkeyup="showResults('searchInputSuzume', 'suggestionsBoxSuzume' )"
+          />
+          <div class="suggestions" id="suggestionsBoxSuzume"></div>
+        </div>
+        <div class="kategorierVideo">
+        <h2 class="overlayh2" onclick="closeVideo('Suzume')">Homepage</h2>
+        <h2  class="overlayh2" onclick="openOverlayForCategoryAndCloseVideo('NewPageOverlay')">New</h2>
+      <h2 class="overlayh2" onclick="openOverlayForCategoryAndCloseVideo('PopularPageOverlay')">Popular</h2>
+      <img class="OverlayMenu" src="Bilder/MenuSection.png" alt="MenuSection" onclick="openMenuSection()">
+      </div>
+      </div>
+      <div class="video-wrapper">
+        <!-- Videoliste -->
+        <div class="video-list1">
+            <p class="listEp">List Of Episodes</p>
+            <nav>
+                <ul>
+                    <li onclick="SuzumeChange('video/Suzume.mp4')">Full Movie Dub</li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Videospiller -->
+        <div class="video-container">
+            <span class="close-btn" onclick="closeVideo('Suzume')">GO BACK</span>
+            <video class="Videospiller" id="SuzumePlayer" controls>
+                <source src="video/Suzume.mp4" type="video/mp4" />
+                Din nettleser støtter ikke videoavspilling.
+            </video>
+            <div class="h3">Suzume</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="SakamotoDays" class="overlay">
+      <div class="headerOverlay">
+        <img class="Logo" src="Bilder/Logo AniHaven.png" alt="" />
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInputSakamotoDays"
+            placeholder="Search For Anime"
+            onkeyup="showResults('searchInputSakamotoDays', 'suggestionsSakamotoDays' )"
+          />
+          <div class="suggestions" id="suggestionsSakamotoDays"></div>
+        </div>
+        <div class="kategorierVideo">
+        <h2 class="overlayh2" onclick="closeVideo('SakamotoDays')">Homepage</h2>
+        <h2  class="overlayh2" onclick="openOverlayForCategoryAndCloseVideo('NewPageOverlay')">New</h2>
+      <h2 class="overlayh2" onclick="openOverlayForCategoryAndCloseVideo('PopularPageOverlay')">Popular</h2>
+      <img class="OverlayMenu" src="Bilder/MenuSection.png" alt="MenuSection" onclick="openMenuSection()">
+      </div>
+      </div>
+      <div class="video-wrapper">
+        <!-- Videoliste -->
+        <div class="video-list1">
+          <p class="listEp">List Of Episodes</p>
+          <nav>
+          <ul>
+            <li onclick="SakamotoChange('video1.mp4')">Episode 1</li>
+            <li onclick="SakamotoChange('video/STANDO POWAH.mp4')">Episode 2</li>
+            <li onclick="SakamotoChange('video/Suzume.mp4')">Episode 3</li>
+            <li onclick="SakamotoChange('video3.mp4')">Episode 4</li>
+            <li onclick="SakamotoChange('video3.mp4')">Episode 5</li>
+            <li onclick="SakamotoChange('video3.mp4')">Episode 6</li>
+            <li onclick="SakamotoChange('video3.mp4')">Episode 7</li>
+            <li onclick="SakamotoChange('video3.mp4')">Episode 8</li>
+            <li onclick="SakamotoChange('video3.mp4')">Episode 9</li>
+            <li onclick="SakamotoChange('video3.mp4')">Episode 10</li>
+            <li onclick="SakamotoChange('video3.mp4')">Episode 11</li>
+            <li onclick="SakamotoChange('video3.mp4')">Episode 12</li>
+            <li onclick="SakamotoChange('video3.mp4')">Episode 13</li>
+          </ul>
+        </nav>
+        </div>
+        <!-- Videospiller -->
+        <div class="video-container">
+          <span class="close-btn" onclick="closeVideo('SakamotoDays')">GO BACK</span>
+          <video class="Videospiller" id="SakamotoDaysPlayer" controls>
+            <source src="video1.mp4" type="video/mp4" />
+            Din nettleser støtter ikke videoavspilling.
+          </video>
+          <div class="h3">SakamotoDays</div>
+        </div>
+      </div>
+    </div>
+    <div id="menuSection">
+      <div class="MenuPillar">
+        <div>
+          <button id="closeBtnMenu" onclick="closeMenuSection()">Close Menu</button>
+          <div id="MenuSectionSearchContainer" >
+            <input
+              type="text"
+              id="searchInputMenu"
+              placeholder="Search For Anime"
+              onkeyup="showResults('searchInputMenu', 'suggestionsBoxMenu' )"
+            />
+            <div class="suggestions" id="suggestionsBoxMenu"></div>
+          </div>
+            <p id="MenuPillarTitle">Menu Section</p>
+              <div id="MenuPillarCategories">
+                <p onclick="openOverlayForCategoryAndCloseVideo('PopularPageOverlay')">Popular</p>
+                <p onclick="openOverlayForCategoryAndCloseVideo('NewPageOverlay')">New</p>
+                <p onclick="CloseAllOverlay()">Homepage</p>
+              </div>
+    
+        </div> 
+      </div>
+    </div>
+<!-- BurgerMenu -->
+<div id="Animepic">
+  <button id="RandomAnime" onclick="takeMeAnywhere()"> Take Me Anywhere</button>
+ </div>
+<p class="pTitle">Trending</p>
+<div class="PopularAnimeDiv">
+  <div class="PicAndText">
+    <img
+      class="PopularAnime"
+      src="Bilder/soloLeveling.jpg"
+      alt=""
+      onclick="openOverlay('SoloLeveling')"
+    />
+    <p>Solo Leveling</p>
+  </div>
+  <div class="Pillar"></div>
+  <div class="PicAndText">
+    <img
+      class="PopularAnime"
+      src="Bilder/OnePiece.jpg"
+      alt=""
+      onclick="openOverlay('OnePiece')"
+    />
+    <p>One Piece</p>
+  </div>
+  <div class="Pillar"></div>
+  <div class="PicAndText">
+    <img
+      class="PopularAnime"
+      src="Bilder/SakamotoDays.jpg"
+      alt=""
+      onclick="openOverlay('SakamotoDays')"
+    />
+    <p>Sakamoto Days</p>
+  </div>
+</div>
+<!-- Most popular section -->
+<br />
+<p class="pTitle">Most Popular</p>
+<div class="PopularAnimeDiv">
+  <div class="PicAndText">
+    <img
+      class="PopularAnime"
+      src="Bilder/soloLeveling.jpg"
+      alt=""
+      onclick="openOverlay('SoloLeveling')"
+    />
+    <p>Solo Leveling</p>
+  </div>
+  <div class="Pillar"></div>
+  <div class="PicAndText">
+    <img
+      class="PopularAnime"
+      src="Bilder/Suzume.jpg"
+      alt=""
+      onclick="openOverlay('Suzume')"
+    />
+    <p>Suzume</p>
+  </div>
+
+  <div class="Pillar"></div>
+  <div class="PicAndText">
+    <img
+      class="PopularAnime"
+      src="Bilder/SakamotoDays.jpg"
+      alt=""
+      onclick="openOverlay('SakamotoDays')"
+    />
+    <p>Sakamoto Days</p>
+  </div>
+</div>
+    <script src="functionForAll.js"></script>
+  </body>
+  <footer>
+    <p>AniHaven does not store any files on our server, we only linked to the media which is hosted on 3rd party services.
+      © AniHaven.to. All rights reserved.</p>
+  </footer>
+</html>

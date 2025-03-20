@@ -1,0 +1,130 @@
+html, 
+body{
+background-color: var(--basicColor);
+display: flex;
+padding: 0;
+margin: 0;
+flex-direction: column;
+gap: 20px;
+overflow-x: hidden;
+}
+.Logo {
+    display: flex;
+    height: 100px; /* Adjust size */
+    width: auto;
+  }
+  #Logodiv {
+    width: 600px;
+    display: block;
+  }
+#MainBox{
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 1600px;
+    height: 900px;
+    background-color: var(--boxcolor);
+}
+footer {
+    width: 100%;
+    position: relative; /* Stiller footeren i forhold til det øvrige innholdet */
+    bottom: 0;
+    background-color: #333; /* Velg ønsket bakgrunnsfarge */
+    color: white; /* Velg ønsket tekstfarge */
+    text-align: center; /* Sentrer teksten */
+    padding: 10px 0; /* Legger litt plass rundt teksten */
+  }
+#categories{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+#categories a{
+    font-size: 3em;
+    font-family: var(--Bangers);
+    color: var(--buttonAndText);
+    text-decoration: none;
+}
+.pillar{
+    width: 5px;
+    height: 100px;
+    background: var(--boxcolor);
+}
+#menuSection {
+    display: none;
+    position: fixed;
+    flex-direction: row;
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-size: cover;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .MenuPillar {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+    background-color: var(--overlayAndList);
+    margin-left: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #MenuPillarTitle {
+    font-size: 3em;
+    font-family: var(--Lalezar);
+    color: var(--buttonAndText);
+    padding-left: 70px;
+    
+  }
+  #MenuPillarCategories  {
+    display: flex;
+    flex-direction: column;
+  }
+  #MenuPillarCategories p{
+  font-size: 2em;
+  align-self: center;
+  font-family: var(--Lalezar);
+  color: var(--overlayColor);
+  cursor: pointer;
+  }
+  #MenuPillarCategories p:hover{
+    color: var(--overlayColor);
+    }
+  #closeBtnMenu {
+    width: max-content;
+    font-size: 3em;
+    justify-content: center;
+    width: 400px;
+    height: 100px;
+    color: var(--white);
+    background-color: var(--overlayColor);
+    transition: 100ms;
+  }
+  #MenuSectionSearchContainer{
+    flex-grow: 1; /* Allows it to stretch */
+    max-width: 400px; /* Adjust width */
+  }
+  #closeBtnMenu:hover {
+    background-color: var(--basicColor);
+  }
+:root {
+    --basicColor: #bebebe;
+    --overlayColor: #6b6b6b;
+    --buttonAndText: #d42900;
+    --overlayAndList: #b2b2b2;
+    --white: #ffffff;
+    --boxcolor: #d9d9d9;
+    --overlayColorTransparent: #6b6b6b82;
+    --Bangers: "Bangers", cursive;
+    --Lalezar: "Lalezar", cursive;
+  }
+  @media (max-width: 1200px) {
+#Mainbox{
+  max-width: 100px;
+}
+  }
