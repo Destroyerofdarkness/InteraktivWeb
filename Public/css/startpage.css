@@ -10,20 +10,20 @@ overflow-x: hidden;
 }
 .Logo {
     display: flex;
-    height: 100px; /* Adjust size */
+    height: 5rem; /* Adjust size */
     width: auto;
   }
   #Logodiv {
-    width: 600px;
+    width: 3rem;
     display: block;
   }
 #MainBox{
-    border-radius: 60px;
+    border-radius: 4rem;
     display: flex;
     justify-content: center;
     align-self: center;
-    width: 1600px;
-    height: 900px;
+    width: 90rem;
+    height: 60rem;
     background-color: var(--boxcolor);
 }
 footer {
@@ -33,85 +33,126 @@ footer {
     background-color: #333; /* Velg ønsket bakgrunnsfarge */
     color: white; /* Velg ønsket tekstfarge */
     text-align: center; /* Sentrer teksten */
-    padding: 10px 0; /* Legger litt plass rundt teksten */
+    padding: 1rem 0; /* Legger litt plass rundt teksten */
   }
 #categories{
     display: flex;
-    gap: 100px;
+    gap: 5rem;
     justify-content: center;
     align-items: center;
 }
 #categories a{
-    font-size: 3em;
+    font-size: 3rem;
     font-family: var(--Bangers);
     color: var(--buttonAndText);
     text-decoration: none;
 }
 .pillar{
-    width: 5px;
-    height: 100px;
+    width: 0.2rem;
+    height: 7rem;
     background: var(--boxcolor);
 }
 #menuSection {
-    display: none;
-    position: fixed;
-    flex-direction: row;
-    background-color: var(--white);
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    background-size: cover;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  .MenuPillar {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 20%;
-    background-color: var(--overlayAndList);
-    margin-left: auto;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  #MenuPillarTitle {
-    font-size: 3em;
-    font-family: var(--Lalezar);
-    color: var(--buttonAndText);
-    padding-left: 70px;
-    
-  }
-  #MenuPillarCategories  {
-    display: flex;
-    flex-direction: column;
-  }
-  #MenuPillarCategories p{
-  font-size: 2em;
-  align-self: center;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: var(--overlayColorTransparent);
+  background-size: cover;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.MenuPillar {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+  background-color: var(--overlayAndList);
+  margin-left: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#MenuPillarTitle {
+  font-size: 3rem;
   font-family: var(--Lalezar);
+  color: var(--buttonAndText);
+  padding-left: 4rem;
+  
+}
+#MenuPillarCategories  {
+  display: flex;
+  flex-direction: column;
+}
+#MenuPillarCategories p{
+font-size: 2rem;
+align-self: center;
+font-family: var(--Lalezar);
+color: var(--overlayColor);
+cursor: pointer;
+}
+#MenuPillarCategories p:hover{
   color: var(--overlayColor);
-  cursor: pointer;
   }
-  #MenuPillarCategories p:hover{
-    color: var(--overlayColor);
-    }
-  #closeBtnMenu {
-    width: max-content;
-    font-size: 3em;
-    justify-content: center;
-    width: 400px;
-    height: 100px;
-    color: var(--white);
-    background-color: var(--overlayColor);
-    transition: 100ms;
-  }
+#closeBtnMenu {
+  width: max-content;
+  font-size: 3rem;
+  justify-content: center;
+  width: 25rem;
+  height: 5rem;
+  color: var(--white);
+  background-color: var(--overlayColor);
+  transition: 100ms;
+}
   #MenuSectionSearchContainer{
-    flex-grow: 1; /* Allows it to stretch */
-    max-width: 400px; /* Adjust width */
+    max-width: 21.8rem; /* Adjust width */
+    margin-left: 1rem;
   }
   #closeBtnMenu:hover {
     background-color: var(--basicColor);
   }
+/*Searchbar*/
+.search-container {
+  flex-grow: 1; /* Allows it to stretch */
+  max-width: 25rem; /* Adjust width */
+  padding-top: 3rem;
+}
+input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+}
+.suggestions {
+  display: flex;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  border-top: none;
+  background: var(--white);
+  max-height: 10rem;
+  max-width: 45rem;
+  overflow-y: auto;
+  display: none; /* Hide initially */
+  background-color: var(--overlayColor);
+  font-family: var(--Lalezar);
+  font-size: 150%;
+}
+.suggestion-img {
+  width: 5rem; /* Adjust this width to your preference */ /* Adjust this height to your preference */
+  object-fit: cover; /* Ensures the image fits within the box without distortion */
+  margin-right: 2rem; /* Adds space between the image and the text */
+}
+
+.suggestions div {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.suggestions div:hover {
+  background: var(--basicColor);
+}
 :root {
     --basicColor: #bebebe;
     --overlayColor: #6b6b6b;
@@ -123,7 +164,7 @@ footer {
     --Bangers: "Bangers", cursive;
     --Lalezar: "Lalezar", cursive;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 720px) {
 #Mainbox{
   max-width: 100px;
 }
