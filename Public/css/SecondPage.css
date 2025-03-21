@@ -445,7 +445,6 @@ cursor: pointer;
     }
     #kategorierHeader{
       width: 8rem;
-      height: 30px
     }
     #kategorierHeader div {
         display: none; /* Skjul "New" og "Popular"-knappene */
@@ -462,11 +461,16 @@ cursor: pointer;
     .headerOverlay div img {
       display: block;
     }
+    .headerOverlay{
+      width: 100%;
+      max-height: 4rem;
+      gap: 22rem;
+    }
     .MenuPillar {
       width: 50%; /* Bredden økes for mindre skjermer */
   }
   .Logo {
-    height:2rem;
+    height:3rem;
   }
   .kategorierVideo img{
     display: block;
@@ -474,13 +478,13 @@ cursor: pointer;
   }
   #closeBtnMenu {
       width: 100%; /* Full bredde på små skjermer */
-      font-size: 2em; /* Mindre tekststørrelse */
+      font-size: 2rem; /* Mindre tekststørrelse */
   }
 .video-wrapper {
   width: 90%;
   padding: 0;
   align-self: center;
-  height: 10px;
+  height: 1rem;
   flex-direction: column; /* Endrer retningen til kolonne */
 }
 #MenuSectionSearchContainer{
@@ -489,10 +493,10 @@ cursor: pointer;
   
 }
 .video-list1 {
-  font-size: 1em;
+  font-size: 2rem;
   width: 100%; /* Full bredde på små skjermer */
-  min-height: 200px; /* Minimumshøyde for å sikre at den er synlig */
-  max-height: 300px; /* Begrens maksimal høyde */
+  min-height: 20rem; /* Minimumshøyde for å sikre at den er synlig */
+  max-height: 20rem; /* Begrens maksimal høyde */
   overflow-y: auto; /* Legg til scroll hvis innholdet er for langt */
 }
 .video-list1 nav ul{
@@ -525,7 +529,7 @@ cursor: pointer;
   width: 8rem;
 }
 #RandomAnime{
-  width: 70%;
+  width: 60%;
   font-size: 3rem;
   height: 4rem
 }
@@ -540,19 +544,15 @@ footer p{
   font-size: 1rem;
 }
 .pTitle{
-font-size: 1rem;
+font-size: 3rem;
 }
 header{
-  height: 40px;
-}
-.bigPillar{
-  height: 2px;
-  width: 90%;
+  height: 2.5rem;
 }
 .TitleOverlay p{
-  font-size: 1rem;
+  font-size: 3rem;
 }
 .OverlayMenuHeaderAndOverlay{
-  padding-top: 50px;
+  padding-top: 2.5rem;
 }
 }
