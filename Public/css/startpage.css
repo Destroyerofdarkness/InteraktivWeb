@@ -129,6 +129,24 @@ input {
   }
   @media (max-width: 720px) {
 #Mainbox{
-  max-width: 100px;
+ width: 10rem;
+
+}
+#ButtonBox button{
+  width: 30rem;
+}
+#categories a{
+  font-size: 2rem;
+}
+input {
+  width: 30rem;
+}
+.search-container{
+  justify-content: center;
+  width: 18rem;
+}
+.suggestions{
+  width: 33rem;
+  height: max-content;
 }
   }
