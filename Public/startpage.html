@@ -28,35 +28,26 @@
       <a href="ThirdPage.html">Popular</a>
     </nav>
 
-    <div id="MainBox">ddddd</div>
-
-
-
-
-
-    <div id="menuSection">
-        <div class="MenuPillar">
-          <div>
-            <button id="closeBtnMenu" onclick="closeMenuSection()">Close Menu</button>
-            <div id="MenuSectionSearchContainer" >
-              <input
-                type="text"
-                id="searchInput"
-                placeholder="Search For Anime"
-                onkeyup="showResults('searchInput', 'suggestionsBox' )"
-              />
-              <div class="suggestions" id="suggestionsBox"></div>
-            </div>
-              <p id="MenuPillarTitle">Menu Section</p>
-                <div id="MenuPillarCategories">
-                  <p onclick="openOverlayForCategory('PopularPageOverlay')">Popular</p>
-                  <p onclick="openOverlayForCategory('NewPageOverlay')">New</p>
-                  <p onclick="CloseAllOverlay()">Homepage</p>
-                </div>
-      
-          </div> 
-        </div>
+    <div id="MainBox">
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search For Anime"
+          onkeyup="showResults('searchInput', 'suggestionsBox' )"
+        />
+        <div class="suggestions" id="suggestionsBox"></div>
       </div>
+      <div id="ButtonBox">
+        <button><a href="HomePage.html">Watch Anime</a></button>
+      </div>
+    </div>
+
+
+
+
+
+   
     <script src="js/functionForAll.js"></script>
   </body>
   <footer>

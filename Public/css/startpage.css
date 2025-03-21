@@ -22,8 +22,10 @@ overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-self: center;
+    flex-direction: column;
     width: 90rem;
     height: 60rem;
+    gap: 15rem;
     background-color: var(--boxcolor);
 }
 footer {
@@ -52,78 +54,19 @@ footer {
     height: 7rem;
     background: var(--boxcolor);
 }
-#menuSection {
-  display: flex;
-  position: fixed;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  background-color: var(--overlayColorTransparent);
-  background-size: cover;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-.MenuPillar {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 20%;
-  background-color: var(--overlayAndList);
-  margin-left: auto;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-#MenuPillarTitle {
-  font-size: 3rem;
-  font-family: var(--Lalezar);
-  color: var(--buttonAndText);
-  padding-left: 4rem;
-  
-}
-#MenuPillarCategories  {
-  display: flex;
-  flex-direction: column;
-}
-#MenuPillarCategories p{
-font-size: 2rem;
-align-self: center;
-font-family: var(--Lalezar);
-color: var(--overlayColor);
-cursor: pointer;
-}
-#MenuPillarCategories p:hover{
-  color: var(--overlayColor);
-  }
-#closeBtnMenu {
-  width: max-content;
-  font-size: 3rem;
-  justify-content: center;
-  width: 25rem;
-  height: 5rem;
-  color: var(--white);
-  background-color: var(--overlayColor);
-  transition: 100ms;
-}
-  #MenuSectionSearchContainer{
-    max-width: 21.8rem; /* Adjust width */
-    margin-left: 1rem;
-  }
-  #closeBtnMenu:hover {
-    background-color: var(--basicColor);
-  }
 /*Searchbar*/
 .search-container {
-  flex-grow: 1; /* Allows it to stretch */
-  max-width: 25rem; /* Adjust width */
-  padding-top: 3rem;
+  width: 80rem; /* Adjust width */
+  height: 10rem;
+  align-self: center;
 }
 input {
-  width: 100%;
+  height: 6rem;
+  font-size: 3rem;
+  width: 65rem;
   padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 0.3rem;
+  border: 0.2rem solid #ccc;
+  border-radius: 1rem;
 }
 .suggestions {
   display: flex;
@@ -152,6 +95,26 @@ input {
 }
 .suggestions div:hover {
   background: var(--basicColor);
+}
+/*Button*/
+#ButtonBox{
+  display: flex;
+  height: 10rem;
+  width: 80rem;
+  align-self: center;
+  justify-content: center;
+}
+#ButtonBox button{
+  width: 60rem;
+  height: 100%;
+  border-radius: 10rem;
+  background-color: var(--buttonAndText);
+}
+#ButtonBox button a{
+  text-decoration: none;
+  font-size: 5rem;
+  font-family: var(--Bangers);
+  color: var(--white);
 }
 :root {
     --basicColor: #bebebe;
